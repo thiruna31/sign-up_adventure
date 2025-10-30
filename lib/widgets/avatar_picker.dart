@@ -8,13 +8,13 @@ class AvatarPicker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final icons = [Icons.person, Icons.face, Icons.tag_faces, Icons.mood, Icons.person_outline];
+    final emojis = ['😄', '🧙‍♂️', '🦸‍♀️', '🐱', '👽'];
     final colors = [Colors.purple, Colors.deepPurple, Colors.indigo, Colors.teal, Colors.orange];
 
     return SizedBox(
       height: 90,
       child: ListView.builder(
-        itemCount: icons.length,
+        itemCount: emojis.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, i) {
           bool selected = i == selectedIndex;
@@ -34,7 +34,12 @@ class AvatarPicker extends StatelessWidget {
                 child: CircleAvatar(
                   radius: selected ? 35 : 30,
                   backgroundColor: colors[i],
-                  child: Icon(icons[i], color: Colors.white, size: selected ? 32 : 26),
+                  child: Text(
+                    emojis[i],
+                    style: TextStyle(
+                      fontSize: selected ? 32 : 26,
+                    ),
+                  ),
                 ),
               ),
             ),

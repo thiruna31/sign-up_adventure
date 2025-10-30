@@ -18,8 +18,10 @@ class ProgressTracker extends StatelessWidget {
           valueColor: AlwaysStoppedAnimation(_color(p)),
         ),
         SizedBox(height: 6),
-        Text("${p.toStringAsFixed(0)}% Complete",
-            style: TextStyle(fontSize: 12)),
+        Text(
+          "${p.toStringAsFixed(0)}% Complete",
+          style: TextStyle(fontSize: 12),
+        ),
       ],
     );
   }

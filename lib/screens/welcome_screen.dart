@@ -25,7 +25,11 @@ class WelcomeScreen extends StatelessWidget {
                   color: const Color.fromARGB(255, 92, 49, 168),
                   shape: BoxShape.circle,
                 ),
-                child: const Icon(Icons.emoji_emotions, color: Color.fromARGB(255, 145, 143, 143), size: 60),
+                child: const Icon(
+                  Icons.emoji_emotions,
+                  color: Color.fromARGB(255, 145, 143, 143),
+                  size: 60,
+                ),
               ),
               const SizedBox(height: 40),
               AnimatedTextKit(
@@ -33,9 +37,10 @@ class WelcomeScreen extends StatelessWidget {
                   TypewriterAnimatedText(
                     'Join The Adventures!',
                     textStyle: TextStyle(
-                        fontSize: 32,
-                        fontWeight: FontWeight.bold,
-                        color: const Color.fromARGB(255, 63, 35, 110)),
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 63, 35, 110),
+                    ),
                     speed: Duration(milliseconds: 80),
                   ),
                 ],
@@ -44,26 +49,31 @@ class WelcomeScreen extends StatelessWidget {
               const SizedBox(height: 20),
               const Text(
                 'Create Your Account And Start Your Journey',
-                style: TextStyle(fontSize: 16, color: Color.fromARGB(255, 117, 116, 116)),
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Color.fromARGB(255, 117, 116, 116),
+                ),
               ),
               const SizedBox(height: 50),
               ElevatedButton(
                 onPressed: () => Navigator.pushNamed(context, SignupScreen.routeName),
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.deepPurple,
-                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 16),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30))),
+                  backgroundColor: Colors.deepPurple,
+                  padding: EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: const [
-                    Text('Start Adventures',
-                        style: TextStyle(fontSize: 18, color: Colors.white)),
+                    Text(
+                      'Start Adventures',
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
                     SizedBox(width: 10),
                     Icon(Icons.arrow_forward, color: Colors.white),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
